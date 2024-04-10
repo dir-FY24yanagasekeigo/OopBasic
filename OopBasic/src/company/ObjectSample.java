@@ -24,6 +24,9 @@ public class ObjectSample {
         engineer.joinMeeting();
         engineer.developSoftware();
         
+        // 1行空ける
+        System.out.println("");
+        
         // ポリモーフィズムの確認
         Employee projectManager = new Engineer("佐藤", devDepartment, "PM", 99, "Java");
         
@@ -34,6 +37,18 @@ public class ObjectSample {
             // developSoftwareメソッドを呼び出す
             ((Engineer) projectManager).developSoftware();
         }
+        
+        // 1行空ける
+        System.out.println("");
+        
+        // アルバイトインスタンスの作成
+        var parttimeWorker = new ParttimeWorker("太田", department);
+        
+        // 実装したメソッドの呼び出し
+        ((Workable)employee).work();
+        ((Workable)engineer).work();
+        ((Workable)projectManager).work();
+        ((Workable)parttimeWorker).work();
 
     }
 
